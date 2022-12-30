@@ -5,7 +5,7 @@
 unsigned long hash_func::operator()(const string& key) {
     unsigned long total = 0;
     for (int i = 0; i < key.size(); ++i) {
-        total = total *  std::rand() * 13 + key[i];
+        total = total * 131 + key[i];
     }
     return total;
 }
@@ -59,9 +59,20 @@ void HashMapDriver::testDictionary() {
 
     string word;
 
-    cout << endl << "Please input a word; input QUIT to quit." << endl;
-    getline(cin, word); //read a new word from user input
+    while (true){
+        cout << endl << "Please input a word; input QUIT to quit." << endl;
+        getline(cin, word); //read a new word from user input
 
+        if (word == "QUIT")
+            break;
+
+        hash_map<string, string , hash_func>::iterator iterator = dict.find(word);
+        if (iterator != dict.end()){
+            cout << (*iterator).second << endl;
+        } else{
+            cout << "Oops, this word is not found in the dictionary, please try again!" << endl;
+        }
+
+    }
     //please implement the testing!
-
 }

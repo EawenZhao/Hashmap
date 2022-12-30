@@ -1802,7 +1802,7 @@ dedicate     v 献（身）
 deem     vt 认为
 defeat     v 击败；挫败；n 战胜，击败
 defect     n 缺点，不足之处；v 叛变
-；/defective   a 优缺点的；/
+defective   a 优缺点的；/
 defendant     n 被告
 deficiency     n 缺乏，不足
 define     v 下定义；限定
