@@ -66,7 +66,7 @@ void HashMapDriver::testDictionary() {
         if (word == "QUIT")
             break;
 
-        hash_map<string, string , hash_func>::iterator iterator = dict.find(word);
+        hash_map<string, string, hash_func>::iterator iterator = dict.find(word);
         if (iterator != dict.end()){
             cout << (*iterator).second << endl;
         } else{
